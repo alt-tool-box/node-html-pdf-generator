@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            padding: 60px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.2em;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '◆';
+            color: #667eea;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            min-width: 150px;
+            margin: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f7fa;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px dashed #ddd;
+            color: #888;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HTML to PDF Converter</h1>
+            <p class="subtitle">Sample Document with Rich Styling</p>
+        </header>
+
+        <div class="section">
+            <h2>About This Demo</h2>
+            <p>This sample HTML document demonstrates that all CSS styling is preserved when converting to PDF. The converter uses Puppeteer to render HTML exactly as a browser would, ensuring perfect fidelity.</p>
+            <div class="highlight-box">
+                <strong>Key Features:</strong> CSS gradients, custom fonts, flexbox layouts, table styling, and more are all fully preserved in the PDF output.
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">CSS Preserved</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">A4</span>
+                <span class="stat-label">Output Format</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Fast</span>
+                <span class="stat-label">Conversion</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Feature Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Supported</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSS Gradients</td>
+                        <td>✅ Yes</td>
+                        <td>Linear and radial gradients</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Fonts</td>
+                        <td>✅ Yes</td>
+                        <td>Google Fonts & local fonts</td>
+                    </tr>
+                    <tr>
+                        <td>Flexbox & Grid</td>
+                        <td>✅ Yes</td>
+                        <td>Full layout support</td>
+                    </tr>
+                    <tr>
+                        <td>Images</td>
+                        <td>✅ Yes</td>
+                        <td>Inline & external images</td>
+                    </tr>
+                    <tr>
+                        <td>SVG Graphics</td>
+                        <td>✅ Yes</td>
+                        <td>Vector graphics preserved</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Technologies Used</h2>
+            <p>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">Puppeteer</span>
+                <span class="badge">Chrome</span>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Generated with ❤️ by HTML to PDF Converter</p>
+            <p>© 2025 - All CSS styling preserved</p>
+        </div>
+    </div>
+</body>
+</html>
+
